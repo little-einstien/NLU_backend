@@ -23,7 +23,8 @@ def index():
 def responseGenerator(projid,query):
     db = getMongoDBConnection('chatbot_nlu_training')
     collection = db['training_data_'+projid]
-    interpreter = Interpreter.load("F://chatbots/"+projid+"/models/nlu/default/current")
+    #interpreter = Interpreter.load("F://chatbots/"+projid+"/models/nlu/default/current")
+    interpreter = Interpreter.load("./chatbots/"+projid+"/models/nlu/default/current")
     response = interpreter.parse(query)
     # pprint.pprint(response)
     for data in collection.find({'intent' : response['intent']['name']}):
@@ -42,7 +43,8 @@ def responseGeneratorWithLogging():
 
     db = getMongoDBConnection('chatbot_nlu_training')
     collection = db['training_data_'+pid]
-    interpreter = Interpreter.load("F://chatbots/"+pid+"/models/nlu/default/current")
+    #interpreter = Interpreter.load("F://chatbots/"+pid+"/models/nlu/default/current")
+    interpreter = Interpreter.load("./chatbots/"+pid+"/models/nlu/default/current")
     response = interpreter.parse(query)
     pprint.pprint(response)
     #if bot fails the log the failure
@@ -93,15 +95,18 @@ def trainbot(projid):
             t_data['rasa_nlu_data']['common_examples'].append({'intent' : intent['intent'],'text':text['value'],'entities': text['entities']})
 
     pprint.pprint(t_data)
-    f= open("F://chatbots/"+projid+"/training_data.json","w+")
+    #f= open("F://chatbots/"+projid+"/training_data.json","w+")
+    f= open("./chatbots/"+projid+"/training_data.json","w+")
     f.write(json.dumps(t_data))
     f.close()
 
-    t1_data = load_data("F://chatbots/"+projid+"/training_data.json")
-    trainer = Trainer(config.load("F://chatbots//config.yaml"))
+    #t1_data = load_data("F://chatbots/"+projid+"/training_data.json")
+    t1_data = load_data("./chatbots/"+projid+"/training_data.json")
+    trainer = Trainer(config.load("./chatbots/config.yaml"))
     # trainer = Trainer(RasaNLUConfig("F://chatbots/"+projid+"/config.yaml"))
     trainer.train(t1_data)
-    trainer.persist('F://chatbots/'+projid+'/models/nlu/', fixed_model_name="current")
+    #trainer.persist('F://chatbots/'+projid+'/models/nlu/', fixed_model_name="current")
+    trainer.persist('./chatbots/'+projid+'/models/nlu/', fixed_model_name="current")
     return jsonify({'status':'sucess'})
 
     
