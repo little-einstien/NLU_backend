@@ -1,0 +1,63 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "I would like to buy a apple iphone 6",
+        "intent": "buy_phone",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "iphone 6",
+            "entity": "mobile"
+          }
+        ],
+        "response": "The apple iphone 6 is of 700$"
+      },
+      {
+        "text": "I would like to buy a xiomi mi tv",
+        "intent": "buy_tv",
+        "entities": [
+          {
+            "start": 22,
+            "end": 33,
+            "value": "xiomi mi tv",
+            "entity": "tv"
+          }
+        ],
+        "response": "The xiomi mi tv costs 39k"
+      },
+      {
+        "text": "I would like to buy the JBL t100a headphones",
+        "intent": "buy_headphone",
+        "entities": [
+          {
+            "start": 24,
+            "end": 33,
+            "value": "JBL t100a",
+            "entity": "headphones"
+          }
+        ],
+        "response": "JBL headphones costs 1000 rs"
+      },
+      {
+        "text": "please help me in buying apple iphone 6 ",
+        "intent": "buy_phone",
+        "entities": [],
+        "response": "The apple iphone 6 is of 700$"
+      },
+      {
+        "text": "please help me in buying new xiomi tv",
+        "intent": "buy_tv",
+        "entities": [],
+        "response": "The xiomi mi tv costs 39k"
+      },
+      {
+        "text": "what is the rate of JBL t100a headphones",
+        "intent": "buy_headphone",
+        "entities": [],
+        "response": "JBL headphones costs 1000 rs"
+      }
+    ]
+  }
+}

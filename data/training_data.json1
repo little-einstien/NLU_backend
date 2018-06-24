@@ -1,0 +1,24 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Hello",
+        "intent": "greet",
+        "entities": [],
+        "response": "How are you"
+      },
+      {
+        "text": "Hi",
+        "intent": "greet",
+        "entities": [],
+        "response": "How are you"
+      },
+      {
+        "text": "Wassup",
+        "intent": "greet",
+        "entities": [],
+        "response": "wassup how are you"
+      }
+    ]
+  }
+}

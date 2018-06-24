@@ -1,0 +1,254 @@
+{
+  "rasa_nlu_data": {
+    "entity_synonyms": [],
+    "common_examples": [
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hello there"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "moin"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey there"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "let's go"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "hey dude"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "goodmorning"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "goodevening"
+      },
+      {
+        "entities": [],
+        "intent": "greet",
+        "text": "good afternoon"
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "ammount for Employee referal Policy."
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "what is Employee referal policy"
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "referal policy"
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "Employee referal policy"
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "How Employee referal policy works."
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "Policy for employees referal."
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "Policy for referal of employee."
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "tell me about the emp ref policy"
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "tell me about the ref policy of emp"
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "tell me about the referal policy of employee"
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "tell me about the referal policy"
+      },
+      {
+        "entities": [],
+        "intent": "amt_emp_ref_pol",
+        "text": "Kindly elaborate on the amount given for the Employee referal Policy."
+      },
+      {
+        "entities": [],
+        "intent": "salary_review",
+        "text": "Salary reviews time"
+      },
+      {
+        "entities": [],
+        "intent": "salary_review",
+        "text": "what are the durations for salary reviews"
+      },
+      {
+        "entities": [],
+        "intent": "salary_review",
+        "text": "How salary reviews are done"
+      },
+      {
+        "entities": [],
+        "intent": "salary_review",
+        "text": "Are Salary reviews done once or twice a year?"
+      },
+      {
+        "entities": [],
+        "intent": "laptop_allocation",
+        "text": "Does Laptop allocated on role based or Hierarchy based"
+      },
+      {
+        "entities": [],
+        "intent": "laptop_allocation",
+        "text": "How is the Laptop allocated to your employees? Is it role based or Hierachy based."
+      },
+      {
+        "entities": [],
+        "intent": "leave_policy",
+        "text": "what is the policy for leaves"
+      },
+      {
+        "entities": [],
+        "intent": "leave_policy",
+        "text": "policy for leaves"
+      },
+      {
+        "entities": [],
+        "intent": "leave_policy",
+        "text": "what are various leave policies"
+      },
+      {
+        "entities": [],
+        "intent": "leave_policy",
+        "text": "What is the leave policy"
+      },
+      {
+        "entities": [],
+        "intent": "leave_policy",
+        "text": "The Leave policy in your organisation"
+      },
+      {
+        "entities": [],
+        "intent": "training_status",
+        "text": "What is my current training status"
+      },
+      {
+        "entities": [],
+        "intent": "training_status",
+        "text": "tell me about my trainings"
+      },
+      {
+        "entities": [],
+        "intent": "training_status",
+        "text": "what about my trainings"
+      },
+      {
+        "entities": [],
+        "intent": "training_status",
+        "text": "I want to know my traing status"
+      },
+      {
+        "entities": [],
+        "intent": "training_status",
+        "text": "Can you please tell me my training status"
+      },
+      {
+        "entities": [],
+        "intent": "training_status",
+        "text": "where are my trainings"
+      },
+      {
+        "entities": [
+          {
+            "entity": "mobile",
+            "end": 24,
+            "value": "Iphone 6",
+            "start": 16
+          }
+        ],
+        "intent": "buy_mobile",
+        "text": "I want to buy a Iphone 6"
+      },
+      {
+        "entities": [
+          {
+            "entity": "mobile",
+            "end": 41,
+            "value": " iphone 6",
+            "start": 32
+          }
+        ],
+        "intent": "buy_mobile",
+        "text": "Can you please help me in buying iphone 6"
+      },
+      {
+        "entities": [
+          {
+            "entity": "mobile",
+            "end": 31,
+            "value": "iphone 6",
+            "start": 23
+          }
+        ],
+        "intent": "buy_mobile",
+        "text": "Can you provide me the iphone 6"
+      }
+    ],
+    "regex_features": []
+  }
+}

@@ -1,0 +1,1 @@
+{"rasa_nlu_data": {"common_examples": [], "entity_synonyms": [], "regex_features": [{"name": "zipcode", "pattern": "[0-9]{5}"}]}}
