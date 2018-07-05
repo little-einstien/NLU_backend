@@ -21,7 +21,7 @@ def index():
 
 @app.route("/api/<string:projid>/<string:query>/")
 def responseGenerator(projid,query):
-    db = getMongoDBConnection('chatbot_nlu_training')
+    db = getMongoDBConnection('pkasy')
     collection = db['training_data_'+projid]
     #interpreter = Interpreter.load("F://chatbots/"+projid+"/models/nlu/default/current")
     interpreter = Interpreter.load("./chatbots/"+projid+"/models/nlu/default/current")
@@ -41,7 +41,7 @@ def responseGeneratorWithLogging():
     pid = parameters['pid']
     query = parameters['q']
 
-    db = getMongoDBConnection('chatbot_nlu_training')
+    db = getMongoDBConnection('pkasy')
     collection = db['training_data_'+pid]
     #interpreter = Interpreter.load("F://chatbots/"+pid+"/models/nlu/default/current")
     interpreter = Interpreter.load("./chatbots/"+pid+"/models/nlu/default/current")
@@ -62,7 +62,7 @@ def responseGeneratorWithLogging():
     return jsonify(fianlResponse)
 
 def logchat(usermsg,botmsg,sid,pid):
-    db = getMongoDBConnection('chatbot_nlu_training')
+    db = getMongoDBConnection('pkasy')
     collection = db['chatlog_'+pid]
     data = {'$push':{'chat' : {'u_m':usermsg,'b_m':botmsg,'tm' : datetime.datetime.now()}}}
     where = {'pid' : pid,'sid' : sid}
@@ -70,7 +70,7 @@ def logchat(usermsg,botmsg,sid,pid):
     pprint.pprint(result)
 
 def logFailure(usermsg,botmsg,sid,pid):
-    db = getMongoDBConnection('chatbot_nlu_training')
+    db = getMongoDBConnection('pkasy')
     collection = db['failure_'+pid]
     data = {'$push':{'chat' : {'u_m':usermsg,'b_m':botmsg,'tm' : datetime.datetime.now()}}}
     where = {'pid' : pid,'sid' : sid}
@@ -86,7 +86,7 @@ def w():
     condition = location.condition
     return jsonify(condition.text)
 def trainbot(projid):
-    db = getMongoDBConnection('chatbot_nlu_training')
+    db = getMongoDBConnection('pkasy')
     t_data = {'rasa_nlu_data': {'regex_features':[],'entity_synonyms':[],'common_examples' : []}}
     collection = db['training_data_'+projid]
     for intent in collection.find():
